@@ -3,13 +3,15 @@
     text-align: center;
 }
 
-.container{
+.container-count{
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 10px;
 }
 
-.btn{
+.boton{
     padding: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }

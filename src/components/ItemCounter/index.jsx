@@ -19,18 +19,22 @@ const ItemCount = ({stock, initial, onAdd}) => {
       }
     }
 
+    const addCart = () => {
+      onAdd(count);
+      setCount(1);
+    }
+
   return (
     <div>
-        <h2 className='contador'> Producto: {count}</h2>
-        <div className='container'>
-        <button  className='btn' onClick={handleAdd}>+</button>
-        <button  className='btn' onClick={subtract}>-</button>
-        <button className='btn' onClick={() => onAdd(count)}>Agregar al carrito</button>
+        <h2 className='contador'> Unidades: {count}</h2>
+        <div className='container-count'>
+        <button  className='btn btn-primary boton' onClick={handleAdd}>+</button>
+        <button  className='btn btn-primary boton' onClick={subtract}>-</button>
+        <button className='btn btn-primary boton' onClick={addCart}>Agregar al carrito</button>
         </div>
-   
-
     </div>
   )
 }
 
 export default ItemCount
+   

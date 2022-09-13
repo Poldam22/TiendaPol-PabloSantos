@@ -1,0 +1,12 @@
+.tarjeta:hover{
+    transform: scale(1.1);
+    transition: transform 1s;
+}
+
+.tarjeta{
+    
+    cursor: pointer;
+    box-shadow: 15px 17px 17px -10px rgba(0,0,0,0.76);
+    -webkit-box-shadow: 15px 17px 17px -10px rgba(0,0,0,0.76);
+    -moz-box-shadow: 15px 17px 17px -10px rgba(0,0,0,0.76);
+}

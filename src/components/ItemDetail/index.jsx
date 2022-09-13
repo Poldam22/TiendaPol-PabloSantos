@@ -12,18 +12,20 @@ const ItemDetail = ({product}) => {
 
   return (
     <>
-      
     <div className='container'>
+      <div className='title'>
         <h1>{product.title}</h1>
-        <img src={product.image} style={{width:'40%', marginBottom:'1rem'}} alt="detail"/>
-    </div>
-    <div>
         <ItemCount initial={1} stock={10} onAdd={agregarAlCarrito}/>
+      </div>
+      <div className='container-image'>
+        <img src={product.image} style={{width:'25vw', marginBottom:'1rem', marginTop:'3rem'}}  className='image-detail' alt="detail"/>
+      </div>
     </div>
-        
     </>
   )
 }
 
 export default ItemDetail
+
+        
         

@@ -26,7 +26,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
 
   return (
     <div>
-        <h2 className='contador'> Unidades: {count}</h2>
+        <h2 className='contador' style={{color:'grey'}}> Unidades: {count}</h2>
         <div className='container-count'>
         <button  className='btn btn-secondary boton' onClick={handleAdd}>+</button>
         <button  className='btn btn-secondary boton' onClick={subtract}>-</button>

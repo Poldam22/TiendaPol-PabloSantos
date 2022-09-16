@@ -9,4 +9,13 @@
     box-shadow: 15px 17px 17px -10px rgba(0,0,0,0.76);
     -webkit-box-shadow: 15px 17px 17px -10px rgba(0,0,0,0.76);
     -moz-box-shadow: 15px 17px 17px -10px rgba(0,0,0,0.76);
+    animation-name: carga;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+
+}
+
+@keyframes carga{
+    from{opacity: 0;}
+    to{opacity: 1;}
 }

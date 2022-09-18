@@ -3,7 +3,9 @@ import CartWidget from '../CartWidget/index';
 import './style.css'
 import { Link } from 'react-router-dom';
 
+
 const NavBar = () => {
+
   return (
     <div className='nav'>
       <ul>

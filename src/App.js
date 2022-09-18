@@ -8,12 +8,14 @@ import {
 } from "react-router-dom";
 import NotFound from './components/NotFound';
 import CartContainer from './containers/CartContainer';
+import Provedor from './context/ProvedorCart';
 
 
 function App() {
 
 
   return (
+   <Provedor>
     <BrowserRouter>
       <NavBar/>
       <Routes>
@@ -24,6 +26,8 @@ function App() {
         <Route path='*' element={<NotFound/>}/>
       </Routes>
     </BrowserRouter>
+   </Provedor>
+
     
       
       );

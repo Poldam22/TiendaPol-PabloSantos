@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, {useContext, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { Shop } from '../../context/ProvedorCart';
 import ItemCount from '../ItemCount'
@@ -27,7 +27,7 @@ const ItemDetail = ({product}) => {
     <div className='container'>
       <div className='title'>
         <h1 style={{color:'white'}}>{product.title}</h1>
-        {!qty ? (<ItemCount initial={1} stock={10} onAdd={addCart}/>) : 
+        {!qty ? (<ItemCount initial={1} stock={10} onAdd={addCart} />) : 
         (<button className='btn btn-secondary boton' onClick={handleFinish} >Finalizar compra</button>)}
       </div>
       <div className='container-image'>

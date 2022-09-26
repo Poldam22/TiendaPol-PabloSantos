@@ -8,13 +8,16 @@ const Provedor = ({children}) => {
 
   const [cart, setCart] = useState([]);
 
+
   const addItem = (item) =>{
     const productoRepetido = isInCart(item.id)
-    console.log(productoRepetido);
+    
     if(productoRepetido){
      const cartMapeo = cart.map(producto =>{
         if(producto.id === item.id){
           producto.quantity += item.quantity
+          producto.price += (item.price*item.quantity)
+          
           return producto
         }else{
           return producto
@@ -23,10 +26,14 @@ const Provedor = ({children}) => {
       console.log(cartMapeo);
     }else{
       const cartModificado = [...cart, item];
-      setCart(cartModificado)
+      const precioMulti = cartModificado.map(product =>{
+        product.price = product.price*product.quantity
+        return product
+      })
+      setCart(precioMulti)
+    
     }
   }
-  console.log(cart);
 
 
   const isInCart = (id) =>{
@@ -34,7 +41,7 @@ const Provedor = ({children}) => {
   }
 
   return (
-    <Shop.Provider value={{cart, addItem}}>
+    <Shop.Provider value={{cart, setCart, addItem}}>
         {children}
     </Shop.Provider>
   )

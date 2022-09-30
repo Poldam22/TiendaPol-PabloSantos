@@ -4,7 +4,7 @@ import React, {useState} from 'react'
 
 import './style.css'
 
-const ItemCount = ({stock, initial, onAdd}) => {
+const ItemCount = ({stock, initial, onAdd, product}) => {
 
     const[count, setCount] = useState(initial);
 
@@ -31,6 +31,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
 
   return (
     <div>
+        <h3 style={{textAlign:'center'}}>${product.price*count}</h3>
         <h2 className='contador' style={{color:'grey'}}> Unidades: {count}</h2>
         <div className='container-count'>
         <button  className='btn btn-secondary boton' onClick={handleAdd}>+</button>

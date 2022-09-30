@@ -9,10 +9,16 @@ import {
 import NotFound from './components/NotFound';
 import CartContainer from './containers/CartContainer';
 import Provedor from './context/ProvedorCart';
+// import { useEffect } from 'react';
+// import AlgoritmoGuardoAutomatico from './services/guardarProductos';
 
 
 function App() {
 
+  // useEffect(()=>{
+  //   console.log('una sola vez');
+  //   AlgoritmoGuardoAutomatico()
+  // }, [])
 
   return (
    <Provedor>

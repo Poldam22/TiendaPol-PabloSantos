@@ -31,7 +31,7 @@ const ItemDetail = ({product}) => {
     <div className='container'>
       <div className='title'>
         <h1 style={{color:'white'}}>{product.title}</h1>
-        {!qty ? (<ItemCount initial={1} stock={10} onAdd={addCart} product={product}/>) : 
+        {!qty ? (<ItemCount initial={1} stock={product.stock} onAdd={addCart} product={product}/>) : 
         (<button className='btn btn-secondary boton' onClick={handleFinish} >Finalizar compra</button>)}
       </div>
       <div className='container-image'>

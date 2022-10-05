@@ -44,11 +44,13 @@ th{
 
 .a{
     text-decoration: none;
+}
+
+.a:hover{
     box-shadow: 9px 10px 8px -10px rgba(0,0,0,0.82);
     -webkit-box-shadow: 9px 10px 8px -10px rgba(0,0,0,0.82);
     -moz-box-shadow: 9px 10px 8px -10px rgba(0,0,0,0.82);
     
-
 }
 
 .botones{

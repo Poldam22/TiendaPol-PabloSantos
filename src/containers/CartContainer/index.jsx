@@ -2,12 +2,16 @@
 import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { Shop } from '../../context/ProvedorCart'
+import generarOrden from '../../services/generarOrden'
 import './style.css'
+import { collection, addDoc } from "firebase/firestore";
+import { db } from '../../firebase/config'
+import { doc, updateDoc } from "firebase/firestore";
 
 
 const Cart = () => {
 
-const {cart, setCart} = useContext(Shop)
+const {cart, setCart, totalCart, totalUnidades} = useContext(Shop)
 
 
 const eliminarProductos = (product) => {
@@ -15,6 +19,30 @@ const eliminarProductos = (product) => {
   setCart(result);
   }
 
+  const handleBuy = async () =>{
+    const importeTotal = totalCart()
+    const orden = generarOrden('Pedrito', 12334442, 'pedrito@gmail.com', cart, importeTotal);
+    console.log(orden);
+
+// Add a new document with a generated id.
+const docRef = await addDoc(collection(db, "orders"), orden);
+
+cart.forEach(async(productoEnCarrito) => {
+  const productRef = doc(db, "products", productoEnCarrito.id);
+  await updateDoc(productRef, {
+    stock: productoEnCarrito.stock - productoEnCarrito.quantity
+  });
+  
+});
+
+
+
+
+
+
+alert("Gracias por su compra! El ID de la orden de su compra es:" + docRef.id);
+  }
+ 
 
 
   return (
@@ -38,9 +66,11 @@ const eliminarProductos = (product) => {
              )
               
         })}
-      {cart.length ? '' : <tr><td></td>
+      {cart.length ?
+       
+      <tr><td></td><td style={{borderTop:'1px solid', color:'green'}}>Total:</td><td style={{borderTop:'1px solid', color:'green'}}>{totalUnidades()}</td><td style={{borderTop:'1px solid', color: 'green'}}>${totalCart()}</td></tr>  
+      : <tr><td></td>
       <td>No hay productos en el carrito</td></tr>}
-      {/* <tr><td></td><td></td><td>Total:</td><td style={{borderTop:'1px solid'}}></td></tr>   */}
 
 <tr>
   <td>
@@ -50,7 +80,7 @@ const eliminarProductos = (product) => {
   <Link to={"/"}><button type='button' className='btn btn-primary m-3 a'>Agregar otro producto</button></Link>
   </td>
   <td>
-    <button className='btn btn-success m-3 a'>Finalizar comprar</button>
+    <button className='btn btn-success m-3 a' onClick={handleBuy}>Finalizar comprar</button>
   </td>
 </tr>
 

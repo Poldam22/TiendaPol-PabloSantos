@@ -40,8 +40,20 @@ const Provedor = ({children}) => {
     return cart.some(product => product.id === id)
   }
 
+  const totalCart = () =>{
+    const total = cart.reduce((acc, producto) => acc + producto.quantity*producto.price, 0)
+   return total
+  }
+
+  const totalUnidades = () =>{
+    const unidades = cart.reduce((acc, producto) => acc + producto.quantity, 0)
+    return unidades
+  }
+
+
+
   return (
-    <Shop.Provider value={{cart, setCart, addItem}}>
+    <Shop.Provider value={{cart, setCart, addItem, totalCart, totalUnidades}}>
         {children}
     </Shop.Provider>
   )

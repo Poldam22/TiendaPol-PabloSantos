@@ -39,7 +39,8 @@ const ItemDetail = ({product}) => {
       </div>
     </div>
     : 
-    <h2 style={{color:'white', padding:'1rem'}}>Loading...</h2>
+    <h2 style={{color:'white', padding:'1rem'}} className='load'>Loading...</h2>
+    
     }
     </>
 

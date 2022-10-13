@@ -9,7 +9,9 @@ const ItemList = ({products}) => {
             return <Item key={product.id} product={product}/>
         })
       :
-      <h2 style={{color:'white', paddingLeft:'1rem'}}>Loading..</h2>
+      <div className='load'>
+      <h2>Loading..</h2>
+      </div>
       }
     </div>
   )

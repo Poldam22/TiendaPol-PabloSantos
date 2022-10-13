@@ -27,23 +27,19 @@ td{
     color: gray;
 }
 
-th{
-    color: rgb(4, 4, 104);
-    text-align: center;
-}
-
-.botones{
-    display: flex;
-    justify-content: center;
-    margin-top: 1rem;
-}
-
 .m{
     text-align: center;
 }
 
+th{
+    color: rgb(4, 4, 104);
+   
+}
+
+
 .a{
     text-decoration: none;
+
 }
 
 .a:hover{
@@ -53,7 +49,8 @@ th{
     
 }
 
-.botones{
+.button{
     display: flex;
     justify-content: center;
+    align-items: center;
 }

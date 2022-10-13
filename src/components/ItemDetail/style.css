@@ -44,3 +44,11 @@
     margin-top: 1rem;
     margin-bottom: 1rem;
 }
+
+.load{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}

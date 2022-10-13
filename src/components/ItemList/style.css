@@ -4,11 +4,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: repeat(5, auto);
+    grid-template-areas: "load load load load";
    
 }
 
 body{
-    background-color: rgb(175, 199, 237);;
+    background-color: rgb(175, 199, 237);
 }
 
 @media screen and (max-width: 930px) {
@@ -37,4 +38,9 @@ body{
         grid-template-columns: 1fr;
         
     }
+}
+
+.load{
+    grid-area: load;
+    color: white;
 }

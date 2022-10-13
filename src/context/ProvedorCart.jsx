@@ -45,15 +45,9 @@ const Provedor = ({children}) => {
    return total
   }
 
-  const totalUnidades = () =>{
-    const unidades = cart.reduce((acc, producto) => acc + producto.quantity, 0)
-    return unidades
-  }
-
-
 
   return (
-    <Shop.Provider value={{cart, setCart, addItem, totalCart, totalUnidades}}>
+    <Shop.Provider value={{cart, setCart, addItem, totalCart}}>
         {children}
     </Shop.Provider>
   )

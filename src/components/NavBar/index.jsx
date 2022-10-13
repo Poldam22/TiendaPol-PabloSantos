@@ -13,6 +13,8 @@ const {cart} = useContext(Shop)
 
   return (
     <div className='nav'>
+    <div className='aa'><h2 style={{padding:'2rem'}} className='logo'>Poldam</h2></div>
+    
       <ul>
           <li><Link to="/">Home</Link></li>
           <li><Link to="/category/men's clothing">Men's clothing</Link></li>

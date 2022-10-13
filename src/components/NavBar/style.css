@@ -1,10 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
 ul {
     list-style-type: none;
     margin: 0;
-   
     padding: 0;
     overflow: hidden;
-    border: 1px solid #e7e7e7;
+    /* border: 1px solid #24078b; */
     background-color: #f3f3f3;
     display: flex;
     flex-direction: row;
@@ -27,5 +28,20 @@ ul {
     background-color: #ddd;
   }
 
- 
+ .aa{
+  width: 100%;
+  text-align: center;
+  height: 15vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #f3f3f3; */
+  font-family: 'Dancing Script', cursive;
+  color: #f3f3f3;
+  background-color: rgb(15, 1, 94);
+ }
   
+.logo{
+  font-size: 4rem;
+  
+}

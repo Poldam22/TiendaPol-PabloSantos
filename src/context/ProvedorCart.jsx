@@ -45,9 +45,12 @@ const Provedor = ({children}) => {
    return total
   }
 
+  const vaciarCart = () =>{
+    setCart([]);
+  }
 
   return (
-    <Shop.Provider value={{cart, setCart, addItem, totalCart}}>
+    <Shop.Provider value={{cart, setCart, addItem, totalCart, vaciarCart}}>
         {children}
     </Shop.Provider>
   )

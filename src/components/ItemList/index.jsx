@@ -1,6 +1,7 @@
 import React from 'react'
 import Item from '../Item'
 import './style.css'
+import DotLoader from "react-spinners/DotLoader"
 
 const ItemList = ({products}) => {
   return (
@@ -10,8 +11,9 @@ const ItemList = ({products}) => {
         })
       :
       <div className='load'>
-      <h2>Loading..</h2>
+      <DotLoader color="#e8ecff" size={90} />
       </div>
+      
       }
     </div>
   )

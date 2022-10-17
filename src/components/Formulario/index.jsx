@@ -3,6 +3,7 @@ import './style.css'
 import { useNavigate } from 'react-router-dom';
 import { Shop } from '../../context/ProvedorCart';
 import generarOrden from '../../services/generarOrden'
+import DotLoader from "react-spinners/DotLoader"
 
 import { collection, addDoc } from "firebase/firestore";
 import { db } from '../../firebase/config'
@@ -69,11 +70,15 @@ cart.forEach(async(productoEnCarrito) => {
     <h4 style={{marginTop:'4rem'}}>Su codigo de orden es: ${ordenDeCompra}</h4>
     <div style={{marginTop:'10rem'}}><button onClick={final} className='btn btn-success'>Aceptar</button></div>
     </div>
-    : <h2>Loading...</h2>}
+    : <div className='load'><DotLoader
+      color="#e8ecff"
+      size={90}
+      /></div>}
     </div> 
      :
-     <form className="row g-3 modal-container animate__animated animate__backInDown" onSubmit={finalizarCompra}>
-     <h2 style={{textAlign:'center'}}>Datos del comprador</h2>
+     <div className="animate__animated animate__backInDown modal-container" >
+     <h2 style={{textAlign:'center'}} className='titulo-form'>Datos del comprador</h2>
+     <form className="row g-3 mt-3" onSubmit={finalizarCompra}>
   <div className="col-md-4">
     <label className="form-label">Nombre</label>
     <input type="text" className="form-control" id="validationDefault01" required/>
@@ -95,11 +100,12 @@ cart.forEach(async(productoEnCarrito) => {
     <label  className="form-label">Dirección</label>
     <input type="text" className="form-control" id="validationDefault03" required/>
   </div>
-  <div className="col-12 d-flex justify-content-center align-items-center">
-    <button className="btn btn-danger m-2" type="button" onClick={cancel}>Cancelar</button>
-    <button className="btn btn-success m-2" type="submit">Finalizar compra</button>
+  <div className="col-12 botones">
+    <button className="btn btn-danger m-2 width" type="button" onClick={cancel}>Cancelar</button>
+    <button className="btn btn-success m-2 width" type="submit">Finalizar compra</button>
   </div>
 </form>
+</div>
     }
 </div>
 

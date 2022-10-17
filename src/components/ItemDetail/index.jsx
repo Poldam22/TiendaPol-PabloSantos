@@ -4,6 +4,7 @@ import { Shop } from '../../context/ProvedorCart';
 
 import ItemCount from '../ItemCount'
 import './style.css'
+import DotLoader from "react-spinners/DotLoader"
 
 const ItemDetail = ({product}) => {
 
@@ -39,9 +40,8 @@ const ItemDetail = ({product}) => {
       </div>
     </div>
     : 
-    <h2 style={{color:'white', padding:'1rem'}} className='load'>Loading...</h2>
-    
-    }
+    <h2 style={{color:'white', padding:'1rem'}} className='load'>   <DotLoader color="#e8ecff" size={90} /></h2>
+     }
     </>
 
   )

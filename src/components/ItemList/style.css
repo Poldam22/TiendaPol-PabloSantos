@@ -5,11 +5,16 @@
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: repeat(5, auto);
     grid-template-areas: "load load load load";
-   
+    grid-area: lista;
 }
 
 body{
     background-color: rgb(175, 199, 237);
+}
+
+.load{
+    grid-area: load;
+    color: white;
 }
 
 @media screen and (max-width: 930px) {
@@ -17,8 +22,10 @@ body{
         padding-top: 1rem;
         
         grid-template-columns: 1fr 1fr 1fr;
-        
+        grid-template-areas: "lista lista lista";
+        grid-template-areas: "load load load";
     }
+
 }
 
 
@@ -27,6 +34,8 @@ body{
         padding-top: 1rem;
         
         grid-template-columns: 1fr 1fr;
+        grid-template-areas: "lista lista";
+        grid-template-areas: "load load";
         
     }
 }
@@ -34,13 +43,9 @@ body{
 @media screen and (max-width: 400px) {
     .bg{
         padding-top: 1rem;
-        
         grid-template-columns: 1fr;
-        
+        grid-template-areas: "lista";
+        grid-template-areas: "load";
     }
 }
 
-.load{
-    grid-area: load;
-    color: white;
-}

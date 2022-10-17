@@ -1,3 +1,8 @@
+.contenedor{
+    overflow-x: auto;
+}
+
+
 .contenedorTable{
     display: flex;
     justify-content: center;
@@ -5,7 +10,6 @@
     box-shadow: 15px 17px 17px -10px rgba(0,0,0,0.76);
     -webkit-box-shadow: 15px 17px 17px -10px rgba(0,0,0,0.76);
     -moz-box-shadow: 15px 17px 17px -10px rgba(0,0,0,0.76);
- 
 
     
 }
@@ -53,4 +57,25 @@ th{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+
+@media screen and (max-width: 700px){
+    table{
+        margin: 2rem 5rem;
+    }
+}
+
+
+@media screen and (max-width: 400px){
+    table{
+        margin: 2rem 2rem;
+    }
+    .button{
+        flex-direction: column;
+    }
+    .unidades{
+        display: none;
+    }
 }

@@ -16,7 +16,7 @@ ul {
   }
   
   
-  li a {
+  li .abc{
     display: block;
     color: #666;
     text-align: center;
@@ -24,7 +24,7 @@ ul {
     text-decoration: none;
   }
   
-  li a:hover{
+  li .abc:hover{
     background-color: #ddd;
   }
 
@@ -43,5 +43,55 @@ ul {
   
 .logo{
   font-size: 4rem;
-  
+  cursor:pointer;
+  text-decoration: none;
+  color: white;
+}
+
+.logo:hover{
+  color: rgb(0, 247, 255);
+}
+
+.burger{
+  display: none;
+  cursor: pointer;
+}
+
+.btnBurger{
+  display: flex;
+  flex-direction: column;
+  height: 55vh;
+  transition: 2s;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.burgerItem{
+  visibility: visible;
+}
+
+
+
+
+@media screen and (max-width: 750px) {
+   .item{
+    visibility: hidden;
+   }
+   .burger{
+    display:inline;
+    width: 20px;
+    
+   }
+   ul{
+    display: flex;
+    justify-content:flex-end;
+    padding-right: 1.5rem;
+    transition: 2s;
+   }
+}
+
+@media screen and (max-width: 400px){
+.burger{
+  width: 15px;
+}
 }

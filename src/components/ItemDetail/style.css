@@ -3,7 +3,7 @@
    justify-content: row;
    width: 100%;
    flex-direction: row-reverse;
-   height: 80vh;
+   height: 100vh;
    animation-name: carga;
    animation-duration: 2s;
    animation-timing-function: ease;
@@ -68,8 +68,12 @@
   
 }
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 500px){
     .container{
-        height: 130vh;
+        height: 120vh;
+    }
+    .image-detail{
+        margin-right: 0;
+        margin-top: 2rem;
     }
 }

@@ -18,8 +18,6 @@ const handleNav = () =>{
 
 
 
-
-
   return (
     <div className='nav'>
     <div className='aa'><h2 style={{padding:'2rem'}}><Link to='/' className='logo'>Poldam</Link></h2></div> 

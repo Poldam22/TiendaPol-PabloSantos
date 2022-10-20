@@ -61,21 +61,27 @@ th{
 
 
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 850px){
     table{
         margin: 2rem 5rem;
+    }
+    .button{
+        flex-direction: column;
+    }
+    .medium{
+        display: none;
     }
 }
 
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 550px){
     table{
         margin: 2rem 2rem;
     }
     .button{
         flex-direction: column;
     }
-    .unidades{
+    .small{
         display: none;
     }
 }

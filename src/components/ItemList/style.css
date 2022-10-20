@@ -32,7 +32,6 @@ body{
 @media screen and (max-width: 750px) {
     .bg{
         padding-top: 1rem;
-        
         grid-template-columns: 1fr 1fr;
         grid-template-areas: "lista lista";
         grid-template-areas: "load load";
@@ -40,9 +39,11 @@ body{
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 500px) {
     .bg{
         padding-top: 1rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
         grid-template-columns: 1fr;
         grid-template-areas: "lista";
         grid-template-areas: "load";

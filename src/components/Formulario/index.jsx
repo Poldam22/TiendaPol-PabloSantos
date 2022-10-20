@@ -34,9 +34,8 @@ SetcompraExitosa(true)
 
 
 const orden = generarOrden(nombre, apellido, telefono, email, direccion, cart, importeTotal);
-console.log(orden);
 
-// Add a new document with a generated id.
+
 const docRef = await addDoc(collection(db, "orders"), orden);
 
 cart.forEach(async(productoEnCarrito) => {
@@ -70,10 +69,7 @@ cart.forEach(async(productoEnCarrito) => {
     <h4 style={{marginTop:'4rem'}}>Su codigo de orden es: ${ordenDeCompra}</h4>
     <div style={{marginTop:'10rem'}}><button onClick={final} className='btn btn-success'>Aceptar</button></div>
     </div>
-    : <div className='load'><DotLoader
-      color="#e8ecff"
-      size={90}
-      /></div>}
+    : <div className='load'><DotLoader color="#e8ecff"size={90}/></div>}
     </div> 
      :
      <div className="animate__animated animate__backInDown modal-container" >
@@ -110,7 +106,7 @@ cart.forEach(async(productoEnCarrito) => {
 </div>
 
   )
-}
+  }
 
 export default Formulario
 

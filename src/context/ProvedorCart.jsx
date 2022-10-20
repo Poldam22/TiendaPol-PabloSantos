@@ -20,10 +20,9 @@ const Provedor = ({children}) => {
           
           return producto
         }else{
-          return producto
+          return cartMapeo
         }
       })
-      console.log(cartMapeo);
     }else{
       const cartModificado = [...cart, item];
       const precioMulti = cartModificado.map(product =>{

@@ -13,7 +13,6 @@ const ItemList = ({products}) => {
       <div className='load'>
       <DotLoader color="#e8ecff" size={90} />
       </div>
-      
       }
     </div>
   )

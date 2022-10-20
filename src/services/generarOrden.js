@@ -1,5 +1,3 @@
-
-
 const generarOrden = (nombre, apellido, telefono, email, direccion, cart, total) => {
   return {
    buyer: {

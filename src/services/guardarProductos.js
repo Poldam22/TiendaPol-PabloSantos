@@ -1,4 +1,3 @@
-
 import { collection, addDoc } from "firebase/firestore";
 import { db } from '../firebase/config';
 
@@ -17,7 +16,7 @@ productos.forEach(async producto => {
       price: producto.price,
       stock: 20
     });
-    console.log(docRef.id);
+    (docRef.id);
 });
   } catch (error) {
     console.log(error);

@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-
+import swal from 'sweetalert';
 
 
 import './style.css'
@@ -15,7 +15,7 @@ const ItemCount = ({stock, initial, onAdd, product}) => {
       if(count < stock){
         setCount(count + 1);
       }else
-      alert('No hay stock disponible')
+      swal("Disculpa, hay stock disponible", "", "error");
     }
 
     const subtract = () => {
